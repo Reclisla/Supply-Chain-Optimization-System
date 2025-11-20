@@ -513,7 +513,6 @@ public class UserInterface {
              System.out.println("5. Back to Main Menu"); // Changed option number
              System.out.print("Enter choice: ");
              
-             // Handle non-integer input for choice gracefully
              try {
                  choice = Integer.parseInt(sc.nextLine());
              } catch (NumberFormatException e) {
@@ -576,9 +575,6 @@ public class UserInterface {
                  System.out.println("Invalid capacity input. Keeping old capacity.");
              }
          }
-         
-         // Note: Used Capacity is not updated via the UI for simplicity, it should be managed internally
-         // based on inventory (which is not part of the current code).
 
          Warehouse updated = warehouseService.updateWarehouse(id, newName, newLocation, newCapacity);
 
@@ -589,8 +585,6 @@ public class UserInterface {
              System.out.println("Update failed for Warehouse ID: " + id);
          }
      }
-     
-     // ... (other UI methods remain the same) ...
 
     private static void addWarehouse(Scanner sc) throws Exception {
         System.out.print("Warehouse Name: ");
