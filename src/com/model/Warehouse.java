@@ -20,7 +20,7 @@ public class Warehouse {
         this.usedCapacity = 0; 
     }
 
-    // ✅ Full constructor including usedCapacity
+    // Constructor including usedCapacity
     public Warehouse(String warehouseId, String name, String location, int capacity, int usedCapacity) {
         this.warehouseId = warehouseId;
         this.name = name;
