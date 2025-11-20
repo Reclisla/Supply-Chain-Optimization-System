@@ -3,7 +3,7 @@ package com.service;
 import java.util.List;
 
 import com.exception.SupplyChainException;
-import com.management.WarehouseManagement; // Only need WarehouseManagement
+import com.management.WarehouseManagement; 
 import com.model.Warehouse;
 
 public class WarehouseService {
@@ -31,7 +31,7 @@ public class WarehouseService {
     
    
 
-    // Retrieves warehouse details by ID. (Renamed to match UI call)
+    // Retrieves warehouse details by ID
      
     public Warehouse getById(String warehouseId) throws SupplyChainException {
         if (warehouseId == null || warehouseId.trim().isEmpty())
@@ -46,7 +46,7 @@ public class WarehouseService {
         return warehouseMgmt.listAll();
     }
 
-    // Deletes a warehouse record by ID. (Implemented to return boolean as expected by UI)
+    // Deletes a warehouse record by ID. 
      
     public boolean deleteWarehouse(String warehouseId) throws SupplyChainException {
         if (warehouseId == null || warehouseId.trim().isEmpty())
